@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/screen"
+        android:layout_width="368dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:fontFamily="monospace"
+        android:gravity="end"
+        android:text="@string/screenBasicValue"
+        android:textAlignment="viewEnd"
+        android:textSize="18sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:shrinkColumns="*"
+        android:stretchColumns="*"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteX="8dp">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <Button
+                style="@style/DigitBtnStyle"
+                android:text="@string/_7"
+                android:id="@+id/btn7" />
+            <Button
+                style="@style/DigitBtnStyle"
+                android:text="@string/_8"
+                android:id="@+id/btn8" />
+            <Button
+                style="@style/DigitBtnStyle"
+                android:text="@string/_9"
+                android:id="@+id/btn9" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <Button
+                style="@style/DigitBtnStyle"
+                android:text="@string/_4"
+
+                android:id="@+id/btn4" />
+            <Button
+                style="@style/DigitBtnStyle"
+                android:text="@string/_5"
+
+                android:id="@+id/btn5" />
+            <Button
+                style="@style/DigitBtnStyle"
+                android:text="@string/_6"
+                android:id="@+id/btn6" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <Button
+                style="@style/DigitBtnStyle"
+                android:text="@string/_1"
+
+                android:id="@+id/btn1" />
+            <Button
+                style="@style/DigitBtnStyle"
+                android:text="@string/_2"
+
+                android:id="@+id/btn2" />
+            <Button
+                style="@style/DigitBtnStyle"
+                android:text="@string/_3"
+                android:id="@+id/btn3" />
+
+        </TableRow>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="100dp"
+            >
+
+            <Button
+                style="@style/DigitBtnStyle"
+                android:text="@string/_0"
+                android:id="@+id/btn0"
+                android:layout_weight="1"
+                />
+            <Button
+                style="@style/ResetBtn"
+                android:text="@string/reset"
+                android:id="@+id/btnReset"
+                android:layout_weight="1"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnPlus"
+                style="@style/DigitBtnStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/btnPlus"
+                android:onClick="setOperator"
+                android:layout_weight="1"
+                />
+
+            <Button
+                android:id="@+id/btnMinus"
+                style="@style/DigitBtnStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/btnMinus"
+                android:onClick="setOperator"
+                android:layout_weight="1"
+
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnMultiplicate"
+                style="@style/DigitBtnStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/btnMultiplicate"
+                android:onClick="setOperator"
+                android:layout_weight="1"
+
+                />
+
+            <Button
+                android:id="@+id/btnDivide"
+                style="@style/DigitBtnStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/btnDivide"
+                android:onClick="setOperator"
+                android:layout_weight="1"
+
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnEqual"
+                style="@style/DigitBtnStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="100dp"
+                android:text="@string/btnEqual" />
+        </LinearLayout>
+
+    </TableLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
